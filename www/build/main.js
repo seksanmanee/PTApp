@@ -7,7 +7,7 @@ webpackJsonp([8],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_http__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_qs__ = __webpack_require__(505);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_qs__ = __webpack_require__(497);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_qs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_qs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_axios__);
@@ -145,185 +145,11 @@ var AuthProvider = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoodReceiveDetailSavePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_api_rest_api__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(30);
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-
-
-/**
- * Generated class for the GoodReceiveDetailSavePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var GoodReceiveDetailSavePage = /** @class */ (function () {
-    function GoodReceiveDetailSavePage(navCtrl, navParams, viewCtrl, alertCtrl, translate, restApi, app) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.viewCtrl = viewCtrl;
-        this.alertCtrl = alertCtrl;
-        this.translate = translate;
-        this.restApi = restApi;
-        this.app = app;
-        this.isenabled = true;
-        this.form = {
-            documentDate: '',
-            documentNote: '',
-            note: '',
-        };
-        this.saveGRItems = function (params) { return __awaiter(_this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.restApi.post('api/goodsReceives/save', params).then(function (data) {
-                        console.log('save', data);
-                        if (data.success && data.data && data.data.matDoc) {
-                            return data.data;
-                        }
-                        else {
-                            return {
-                                error: true,
-                                message: data.msg[_this.translate.currentLang]
-                            };
-                        }
-                    }).catch(function (error) {
-                        console.log(error);
-                        return {
-                            error: true,
-                            message: _this.translate.instant('Unknown Error')
-                        };
-                    })];
-            });
-        }); };
-    }
-    GoodReceiveDetailSavePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad GoodReceiveDetailSavePage');
-    };
-    GoodReceiveDetailSavePage.prototype.dismiss = function () {
-        this.viewCtrl.dismiss({
-            cancel: true
-        });
-    };
-    GoodReceiveDetailSavePage.prototype.saveData = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            var goodReceive, data, result, alert;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        this.isenabled = false;
-                        goodReceive = this.navParams.get('goodReceive') || {};
-                        data = __assign({ createDate: '', deliveryNote: '', documentDate: '', note: '', postingDate: '', vendorId: '' }, goodReceive, this.form);
-                        return [4 /*yield*/, this.saveGRItems(data)];
-                    case 1:
-                        result = (_a.sent()) || {};
-                        console.log('save result', result);
-                        if (result.matDoc) {
-                            alert = this.alertCtrl.create({
-                                title: this.translate.instant('Success'),
-                                message: this.translate.instant("Material Document") + ": " + result.matDoc
-                            });
-                            alert.onDidDismiss(function () {
-                                _this.viewCtrl.dismiss({ success: true });
-                            });
-                            alert.present();
-                        }
-                        else if (result.error === true) {
-                            this.alertCtrl.create({
-                                title: this.translate.instant('Error'),
-                                message: result.message
-                            }).present();
-                        }
-                        else {
-                            this.alertCtrl.create({
-                                title: this.translate.instant('Error'),
-                                message: this.translate.instant('Unknown error')
-                            }).present();
-                        }
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    GoodReceiveDetailSavePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-good-receive-detail-save',template:/*ion-inline-start:"C:\MobileApp\pt-mobile-master\src\pages\good-receive-detail-save\good-receive-detail-save.html"*/'<!--\n  Generated template for the GoodReceiveDetailSavePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-grid>\n	  <ion-row>\n		<ion-col col-8 style="padding-left:15px;">	\n			<button ion-button menuToggle>\n			  <ion-icon name="menu"></ion-icon>\n			</button>\n		</ion-col>\n		<ion-col col-4 style="padding-right:5px;">\n			<app-header></app-header>\n		</ion-col>\n	  </ion-row>\n	</ion-grid>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <div class="d-flex justify-content-between">\n    <ion-grid>\n	  <ion-row>\n		<ion-col text-left style="font-size:20px;padding-left:15px;">\n		  <ion-icon ios="ios-arrow-back" md="md-arrow-back" (click)="dismiss()"></ion-icon>\n		</ion-col>\n		<ion-col text-center style="font-size:20px">\n		  <ion-title>\n			{{ \'Save Good Receive\' | translate }}\n		  </ion-title>\n		</ion-col>\n		<ion-col text-right style="font-size:20px;padding-right:15px;">\n		  <ion-icon name="refresh" (click)="loadData()"></ion-icon>\n		</ion-col>\n	  </ion-row>\n	</ion-grid>\n	<!-- <button color="light" ion-button (click)="dismiss()">{{ \'Back\' | translate}}</button> -->\n    <!-- <button color="light" ion-button (click)="loadData()">{{ \'Refresh\' | translate}}</button> -->\n  </div>\n\n\n  <ion-item>\n    <ion-label floating>{{ \'Document Date\' | translate}} <span class="text-danger">*</span></ion-label>\n    <!--<ion-input [(ngModel)]="form.documentDate"></ion-input>-->\n	<ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="form.documentDate"></ion-datetime>\n  </ion-item>\n  <ion-item>\n    <ion-label floating>{{ \'DN/Tax Invoice\' | translate }} <span class="text-danger">*</span></ion-label>\n    <ion-input [(ngModel)]="form.documentNote"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label floating>{{ \'Note\' | translate}}</ion-label>\n    <ion-input [(ngModel)]="form.note"></ion-input>\n  </ion-item>\n\n  <div class="row no-gutters p-4">\n    <div class="col pr-2">\n      <button ion-button color="primary" [block]="true"\n              [disabled]="!form.documentNote || !form.documentDate || !isenabled"\n              (click)="saveData()">{{ \'Ok\' | translate}}</button>\n    </div>\n    <div class="col pl-2">\n      <button ion-button color="danger" [block]="true" (click)="dismiss()">{{ \'Cancel\' | translate}}</button>\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\MobileApp\pt-mobile-master\src\pages\good-receive-detail-save\good-receive-detail-save.html"*/,
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["c" /* TranslateService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2__providers_rest_api_rest_api__["a" /* RestApiProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_rest_api_rest_api__["a" /* RestApiProvider */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */]) === "function" && _g || Object])
-    ], GoodReceiveDetailSavePage);
-    return GoodReceiveDetailSavePage;
-    var _a, _b, _c, _d, _e, _f, _g;
-}());
-
-//# sourceMappingURL=good-receive-detail-save.js.map
-
-/***/ }),
-
-/***/ 144:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoodReceiveDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_api_rest_api__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__good_receive_detail_save_good_receive_detail_save__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__good_receive_detail_save_good_receive_detail_save__ = __webpack_require__(144);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_lodash__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_lodash__);
@@ -567,14 +393,23 @@ var GoodReceiveDetailPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 145:
+/***/ 144:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PurchaseOrderPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoodReceiveDetailSavePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_api_rest_api__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(30);
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -584,55 +419,160 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
 
 
 
 /**
- * Generated class for the PurchaseOrderPage page.
+ * Generated class for the GoodReceiveDetailSavePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var PurchaseOrderPage = /** @class */ (function () {
-    function PurchaseOrderPage(navCtrl) {
-        this.navCtrl = navCtrl;
-        this.purchasingOrders = [];
-    }
-    PurchaseOrderPage.prototype.loadData = function () {
+var GoodReceiveDetailSavePage = /** @class */ (function () {
+    function GoodReceiveDetailSavePage(navCtrl, navParams, viewCtrl, alertCtrl, translate, restApi, app) {
         var _this = this;
-        Object(__WEBPACK_IMPORTED_MODULE_2__providers_rest_api_rest_api__["c" /* request */])({
-            method: 'POST',
-            url: 'api/purchasingOrders',
-            data: {
-                start: 0,
-                length: 0,
-            }
-        }).then(function (response) {
-            var data = response.data;
-            _this.purchasingOrders = data.data.purchasingOrders;
-            console.log(data);
-            console.log(_this.purchasingOrders);
-        }).catch(function (error) {
-            console.log(error);
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.viewCtrl = viewCtrl;
+        this.alertCtrl = alertCtrl;
+        this.translate = translate;
+        this.restApi = restApi;
+        this.app = app;
+        this.isenabled = true;
+        this.form = {
+            documentDate: '',
+            documentNote: '',
+            note: '',
+        };
+        this.saveGRItems = function (params) { return __awaiter(_this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.restApi.post('api/goodsReceives/save', params).then(function (data) {
+                        console.log('save', data);
+                        if (data.success && data.data && data.data.matDoc) {
+                            return data.data;
+                        }
+                        else {
+                            return {
+                                error: true,
+                                message: data.msg[_this.translate.currentLang]
+                            };
+                        }
+                    }).catch(function (error) {
+                        console.log(error);
+                        return {
+                            error: true,
+                            message: _this.translate.instant('Unknown Error')
+                        };
+                    })];
+            });
+        }); };
+    }
+    GoodReceiveDetailSavePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad GoodReceiveDetailSavePage');
+    };
+    GoodReceiveDetailSavePage.prototype.dismiss = function () {
+        this.viewCtrl.dismiss({
+            cancel: true
         });
     };
-    PurchaseOrderPage.prototype.ionViewWillEnter = function () {
-        this.loadData();
+    GoodReceiveDetailSavePage.prototype.saveData = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var goodReceive, data, result, alert_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.isenabled = false;
+                        goodReceive = this.navParams.get('goodReceive') || {};
+                        data = __assign({ createDate: '', deliveryNote: '', documentDate: '', note: '', postingDate: '', vendorId: '' }, goodReceive, this.form);
+                        return [4 /*yield*/, this.saveGRItems(data)];
+                    case 1:
+                        result = (_a.sent()) || {};
+                        console.log('save result', result);
+                        if (result.matDoc) {
+                            alert_1 = this.alertCtrl.create({
+                                title: this.translate.instant('Success'),
+                                message: this.translate.instant("Material Document") + ": " + result.matDoc
+                            });
+                            alert_1.onDidDismiss(function () {
+                                _this.viewCtrl.dismiss({ success: true });
+                            });
+                            alert_1.present();
+                        }
+                        else if (result.error === true) {
+                            this.alertCtrl.create({
+                                title: this.translate.instant('Error'),
+                                message: result.message
+                            }).present();
+                        }
+                        else {
+                            this.alertCtrl.create({
+                                title: this.translate.instant('Error'),
+                                message: this.translate.instant('Unknown error')
+                            }).present();
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
     };
-    PurchaseOrderPage = __decorate([
+    GoodReceiveDetailSavePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-purchase-order',template:/*ion-inline-start:"C:\MobileApp\pt-mobile-master\src\pages\purchase-order\purchase-order.html"*/'<!--\n  Generated template for the PurchaseOrderPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>PurchaseOrder</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-item *ngFor="let item of purchasingOrders">\n    <div>ID: {{item.poHeaderId}}</div>\n    <div>Vendor: {{item.vendorName}}</div>\n    <div>Value: {{item.totalValue}}</div>\n  </ion-item>\n</ion-content>\n'/*ion-inline-end:"C:\MobileApp\pt-mobile-master\src\pages\purchase-order\purchase-order.html"*/,
+            selector: 'page-good-receive-detail-save',template:/*ion-inline-start:"C:\MobileApp\pt-mobile-master\src\pages\good-receive-detail-save\good-receive-detail-save.html"*/'<!--\n  Generated template for the GoodReceiveDetailSavePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-grid>\n	  <ion-row>\n		<ion-col col-8 style="padding-left:15px;">	\n			<button ion-button menuToggle>\n			  <ion-icon name="menu"></ion-icon>\n			</button>\n		</ion-col>\n		<ion-col col-4 style="padding-right:5px;">\n			<app-header></app-header>\n		</ion-col>\n	  </ion-row>\n	</ion-grid>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <div class="d-flex justify-content-between">\n    <ion-grid>\n	  <ion-row>\n		<ion-col text-left style="font-size:20px;padding-left:15px;">\n		  <ion-icon ios="ios-arrow-back" md="md-arrow-back" (click)="dismiss()"></ion-icon>\n		</ion-col>\n		<ion-col text-center style="font-size:20px">\n		  <ion-title>\n			{{ \'Save Good Receive\' | translate }}\n		  </ion-title>\n		</ion-col>\n		<ion-col text-right style="font-size:20px;padding-right:15px;">\n		  <ion-icon name="refresh" (click)="loadData()"></ion-icon>\n		</ion-col>\n	  </ion-row>\n	</ion-grid>\n	<!-- <button color="light" ion-button (click)="dismiss()">{{ \'Back\' | translate}}</button> -->\n    <!-- <button color="light" ion-button (click)="loadData()">{{ \'Refresh\' | translate}}</button> -->\n  </div>\n\n\n  <ion-item>\n    <ion-label floating>{{ \'Document Date\' | translate}} <span class="text-danger">*</span></ion-label>\n    <!--<ion-input [(ngModel)]="form.documentDate"></ion-input>-->\n	<ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="form.documentDate"></ion-datetime>\n  </ion-item>\n  <ion-item>\n    <ion-label floating>{{ \'DN/Tax Invoice\' | translate }} <span class="text-danger">*</span></ion-label>\n    <ion-input [(ngModel)]="form.documentNote"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label floating>{{ \'Note\' | translate}}</ion-label>\n    <ion-input [(ngModel)]="form.note"></ion-input>\n  </ion-item>\n\n  <div class="row no-gutters p-4">\n    <div class="col pr-2">\n      <button ion-button color="primary" [block]="true"\n              [disabled]="!form.documentNote || !form.documentDate || !isenabled"\n              (click)="saveData()">{{ \'Ok\' | translate}}</button>\n    </div>\n    <div class="col pl-2">\n      <button ion-button color="danger" [block]="true" (click)="dismiss()">{{ \'Cancel\' | translate}}</button>\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\MobileApp\pt-mobile-master\src\pages\good-receive-detail-save\good-receive-detail-save.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]])
-    ], PurchaseOrderPage);
-    return PurchaseOrderPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_api_rest_api__["a" /* RestApiProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */]])
+    ], GoodReceiveDetailSavePage);
+    return GoodReceiveDetailSavePage;
 }());
 
-//# sourceMappingURL=purchase-order.js.map
+//# sourceMappingURL=good-receive-detail-save.js.map
 
 /***/ }),
 
-/***/ 146:
+/***/ 145:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -701,6 +641,71 @@ var PurchaseRequestPage = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 146:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PurchaseOrderPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_api_rest_api__ = __webpack_require__(25);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the PurchaseOrderPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var PurchaseOrderPage = /** @class */ (function () {
+    function PurchaseOrderPage(navCtrl) {
+        this.navCtrl = navCtrl;
+        this.purchasingOrders = [];
+    }
+    PurchaseOrderPage.prototype.loadData = function () {
+        var _this = this;
+        Object(__WEBPACK_IMPORTED_MODULE_2__providers_rest_api_rest_api__["c" /* request */])({
+            method: 'POST',
+            url: 'api/purchasingOrders',
+            data: {
+                start: 0,
+                length: 0,
+            }
+        }).then(function (response) {
+            var data = response.data;
+            _this.purchasingOrders = data.data.purchasingOrders;
+            console.log(data);
+            console.log(_this.purchasingOrders);
+        }).catch(function (error) {
+            console.log(error);
+        });
+    };
+    PurchaseOrderPage.prototype.ionViewWillEnter = function () {
+        this.loadData();
+    };
+    PurchaseOrderPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-purchase-order',template:/*ion-inline-start:"C:\MobileApp\pt-mobile-master\src\pages\purchase-order\purchase-order.html"*/'<!--\n  Generated template for the PurchaseOrderPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>PurchaseOrder</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-item *ngFor="let item of purchasingOrders">\n    <div>ID: {{item.poHeaderId}}</div>\n    <div>Vendor: {{item.vendorName}}</div>\n    <div>Value: {{item.totalValue}}</div>\n  </ion-item>\n</ion-content>\n'/*ion-inline-end:"C:\MobileApp\pt-mobile-master\src\pages\purchase-order\purchase-order.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]])
+    ], PurchaseOrderPage);
+    return PurchaseOrderPage;
+}());
+
+//# sourceMappingURL=purchase-order.js.map
+
+/***/ }),
+
 /***/ 158:
 /***/ (function(module, exports) {
 
@@ -723,11 +728,11 @@ webpackEmptyAsyncContext.id = 158;
 
 var map = {
 	"../pages/auth/auth.module": [
-		647,
+		646,
 		7
 	],
 	"../pages/good-receive-detail-save/good-receive-detail-save.module": [
-		646,
+		647,
 		6
 	],
 	"../pages/good-receive-detail/good-receive-detail.module": [
@@ -735,23 +740,23 @@ var map = {
 		5
 	],
 	"../pages/good-receive/good-receive.module": [
-		650,
+		649,
 		4
 	],
 	"../pages/login/login.module": [
-		649,
+		650,
 		3
 	],
 	"../pages/menu/menu.module": [
-		651,
+		652,
 		2
 	],
 	"../pages/purchase-order/purchase-order.module": [
-		652,
+		653,
 		1
 	],
 	"../pages/purchase-request/purchase-request.module": [
-		653,
+		651,
 		0
 	]
 };
@@ -768,6 +773,226 @@ webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 };
 webpackAsyncContext.id = 201;
 module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 204:
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+
+/***/ }),
+
+/***/ 215:
+/***/ (function(module, exports) {
+
+module.exports = function(module) {
+	if(!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if(!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
 
 /***/ }),
 
@@ -1076,9 +1301,9 @@ var ContactPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__purchase_order_purchase_order__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__purchase_order_purchase_order__ = __webpack_require__(146);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__good_receive_good_receive__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__purchase_request_purchase_request__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__purchase_request_purchase_request__ = __webpack_require__(145);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__ = __webpack_require__(30);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1165,11 +1390,11 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_barcode_scanner__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_rest_api_rest_api__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_auth_auth__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_purchase_order_purchase_order__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_purchase_order_purchase_order__ = __webpack_require__(146);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_good_receive_good_receive__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_purchase_request_purchase_request__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_purchase_request_purchase_request__ = __webpack_require__(145);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pipes_callback__ = __webpack_require__(548);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_good_receive_detail_good_receive_detail__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_good_receive_detail_good_receive_detail__ = __webpack_require__(143);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_http__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_login_login__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ng2_validation__ = __webpack_require__(549);
@@ -1180,7 +1405,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ngx_translate_http_loader__ = __webpack_require__(643);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_menu_menu__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_auth_auth__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_good_receive_detail_save_good_receive_detail_save__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_good_receive_detail_save_good_receive_detail_save__ = __webpack_require__(144);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_components_module__ = __webpack_require__(644);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1246,14 +1471,14 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/good-receive-detail-save/good-receive-detail-save.module#GoodReceiveDetailSavePageModule', name: 'GoodReceiveDetailSavePage', segment: 'good-receive-detail-save', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/auth/auth.module#AuthPageModule', name: 'AuthPage', segment: 'auth', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/good-receive-detail-save/good-receive-detail-save.module#GoodReceiveDetailSavePageModule', name: 'GoodReceiveDetailSavePage', segment: 'good-receive-detail-save', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/good-receive-detail/good-receive-detail.module#GoodReceiveDetailPageModule', name: 'GoodReceiveDetailPage', segment: 'good-receive-detail', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/good-receive/good-receive.module#GoodReceivePageModule', name: 'GoodReceivePage', segment: 'good-receive', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/purchase-request/purchase-request.module#PurchaseRequestPageModule', name: 'PurchaseRequestPage', segment: 'purchase-request', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/purchase-order/purchase-order.module#PurchaseOrderPageModule', name: 'PurchaseOrderPage', segment: 'purchase-order', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/purchase-request/purchase-request.module#PurchaseRequestPageModule', name: 'PurchaseRequestPage', segment: 'purchase-request', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/purchase-order/purchase-order.module#PurchaseOrderPageModule', name: 'PurchaseOrderPage', segment: 'purchase-order', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_24__angular_common_http__["b" /* HttpClientModule */],
@@ -1619,10 +1844,12 @@ var MyApp = /** @class */ (function () {
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\MobileApp\pt-mobile-master\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\MobileApp\pt-mobile-master\src\app\app.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__["c" /* TranslateService */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__["c" /* TranslateService */]])
     ], MyApp);
     return MyApp;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=app.component.js.map
@@ -1701,6 +1928,34 @@ var CallbackPipe = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=callback.js.map
+
+/***/ }),
+
+/***/ 58:
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
 
 /***/ }),
 
@@ -2074,7 +2329,7 @@ var MenuPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_api_rest_api__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__good_receive_detail_good_receive_detail__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__good_receive_detail_good_receive_detail__ = __webpack_require__(143);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_moment__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_lodash__ = __webpack_require__(214);
